@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Music, Arts, and Child Development Project</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu|Boogaloo|Bubblegum+Sans|Cabin+Sketch|Love+Ya+Like+A+Sister" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+
+
+</head>
+<style type="text/css">
+  #faq {
+    background-color: #F5F5F5;
+  }
+
+  #team {
+    background: #f7fafc;
+    padding: 0px;
+  }
+
+  .self-introduction {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .65);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
+
+  .team-box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .15);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 2px;
+    transition: all .3s;
+  }
+
+  .time-line {
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 20px;
+  }
+
+  .brief-p {
+    font-size: 12px;
+  }
+
+  .popover {
+    max-width: 600px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    /* width: 100%; */
+  }
+
+  .navbar-nav {
+    margin-right: 50px;
+  }
+</style>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#">
+          <img src="./img/logo.png" width="250" height="50" alt="">
+        </a>
+      <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Acerca de</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#team">Nuestro equipo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#faq">Preguntas frecuentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#kidscorner">Esquina para niños</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#gettinghere">Programe su cita</a>
+          </li>
+
+          <li class="nav-item">
+            <select onchange="languageChange(this.value)" id="languageChange" class="selectpicker" data-width="95" data-style="btn-warning">
+                <option value="Spanish">Español</option>
+                <option value="English">English</option>
+
+              </select>
+
+          </li>
+
+
+
+        </ul>
+
+      </div>
+    </div>
+    <img src="./img/usclogo.png" width="auto" height="40" alt="">
+  </nav>
+
+  <!-- <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>Welcome to Scrolling Nav</h1>
+        <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
+      </div>
+    </header> -->
+
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('img/Slide1.png');background-position: center; background-repeat: no-repeat; background-size: cover;">
+          <div class="carousel-caption d-none d-md-block">
+            <!-- <h3>First Slide</h3>
+              <p>This is a description for the first slide.</p> -->
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('img/GroupPhoto.jpg');background-position: center; background-repeat: no-repeat; background-size: cover;">
+          <div class="carousel-caption d-none d-md-block">
+            <!-- <h3>Second Slide</h3>
+              <p>This is a description for the second slide.</p> -->
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('img/Slide3.png');background-position: center; background-repeat: no-repeat; background-size: cover;">
+          <div class="carousel-caption d-none d-md-block">
+            <!-- <h3>Third Slide</h3>
+              <p>This is a description for the third slide.</p> -->
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+  </header>
+
+
+  <!-- about -->
+  <section id="about">
+    <div class="container">
+      <div class="g-pt-90">
+        <div class="g-heading-v10 g-mb-30 text-center">
+          <h2>
+                           <em class="block-name">
+                             <span>01.</span>
+                             Acerca de
+                           </em>
+                            Proyecto de música, arte, y el desarrollo infantil
+                         </h2>
+          <p>
+            El objetivo del proyecto de investigación de música, arte, y el desarrollo infantil es investigar cual es el impacto del entrenamiento de arte y música sobre el desarrollo cognitivo, emocional, social, y del cerebro infantil. Este proyecto investigativo
+            es un esfuerzo colaborativo entre el Instituto del Cerebro y la Creatividad de USC, el programa YOLA de la Filarmónica de Los Ángeles, y Camino Nuevo Charter Academy.
+
+            <!-- The goal of the MUSIC, ARTS and CHILD DEVELOPMENT research project is to investigate the impact of arts and music training on children’s cognitive, emotional, social, and brain development.
+                           This research project is a collaborative effort between <a target="_blank" href="https://dornsife.usc.edu/bci/">USC Brain and Creativity Institute</a>, the <a href="https://www.laphil.com/education/local-programs/youth-orchestra-los-angeles/" target="_blank">Los Angeles Philharmonic YOLA program</a> and <a href="https://www.caminonuevo.org/" target="_blank">Camino Nuevo Charter Academy</a>. -->
+          </p>
+          <br/>
+          <a href="https://www.laphil.com/" target="_blank"><img src="./img/lalogo.png" class="img-fluid" alt=""></a>
+          <a href="https://www.annenberg.org/initiatives/global-humanitarian-arts-education/grow-annenberg/" target="_blank"><img src="./img/Grow.png" class="img-fluid" alt=""></a>
+          <!-- <p>The research project is funded by the generous support of the <a href="https://www.laphil.com/" target="_blank">Los Angeles Philharmonic Association</a> and the <a href="https://www.annenberg.org/initiatives/global-humanitarian-arts-education/grow-annenberg/" target="_blank">GROW @ Annenberg Foundation</a>.  </p> -->
+          <p>El proyecto investigativo es fundado por el apoyo generoso de la Filarmónica de Los Ángeles y GROW @ Annenberg . </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End about -->
+
+  <!-- team -->
+  <section id="team">
+    <div class="container">
+      <div class="g-pt-90 g-pb-70">
+        <div class="g-heading-v10 g-mb-65 text-center">
+          <h2><em class="block-name"><span>02.</span> Nuestro equipo
+</em>Conoce a nuestro equipo</h2>
+        </div>
+
+        <div class="row equal-height-columns team-members">
+          <div class="col-lg-4 col-sm-6  text-center mb-4 ">
+            <div class="team-box">
+              <div class="time-line">
+                <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image1-1.jpg" alt="">
+                <h5>Dra. Assal Habibi
+                              <br/>
+                              <small>Investigadora principal</small>
+                            </h5>
+              </div>
+
+              <p class="self-introduction">
+                La Dra. Assal Habibi es una profesora asistente de investigación de psicología en el Instituto del Cerebro y la Creatividad de la Universidad del Sur de California. Sus investigaciones toman una perspectiva amplia en como disposiciones biológicas y factores
+                del ambiente interactúan y como las experiencias del aprendizaje durante la niñez moldean el desarrollo humano. Ella es una experta en el uso de técnicas de electroencefalografía y nuero-imágenes para investigar la estructura y función
+                cerebral. Su trabajo investigativo ha sido publicado en varias revistas académicas de revisión paritaria. La Dra. Habibi completo su doctorado en la Universidad de California, Irvine, investigando los efectos del entrenamiento musical
+                en músicos, no-músicos y pacientes con deterioro auditivo. La Dra. Habibi es una pianista con entrenamiento clásico y tiene muchos años de experiencia enseñando música a niños.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 col-sm-6  text-center mb-4">
+            <div class="team-box">
+              <div class="time-line">
+                <img class="rounded-circle img-fluid d-block mx-auto" src="./img/HD.jpg" alt="">
+                <h5>Dra. Hanna Damasio
+                                <br/>
+                                <small>Directora, Instituto de Nuero-imágenes de Dornsife</small>
+                              </h5>
+              </div>
+              <p class="self-introduction">
+                La Dra. Hanna Damasio, doctora en medicina, es una profesora universitaria; Profesora de neurociencia Dana Dornsife, y directora del Centro de Imágenes de Neurociencia Cognitiva de Dana y David Dornsife en la Universidad del Sur de California. Usando la técnica de tomografía computarizada y escaneo por resonancia magnética, ella ha desarrollado métodos para investigar la estructura del cerebro humano y ha investigado funciones como el lenguaje, la memoria y las emociones, usando el método de lesiones y nuero-imágenes funcionales. Además de numerosas publicaciones en revisitas de ciencia (el índice H de su red de conocimiento es 74; mas de 25,000 citaciones) ella es la autora del premiado Análisis de lesiones en neuropsicología (Prensa de la Universidad de Oxford), y de Anatomía del cerebro humano en imágenes computarizadas (Prensa de la Universidad de Oxford), el primer atlas del cerebro a base de datos de imágenes computarizados, ahora en su segunda edición.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4  col-sm-6 text-center mb-4">
+            <div class="team-box">
+              <div class="time-line">
+                <img class="rounded-circle img-fluid d-block mx-auto" src="./img/AD.jpeg" alt="">
+                <h5>Dr. Antonio Damasio
+                                <br/>
+                                <small>Director, Instituto del Cerebro y la Creatividad</small>
+                              </h5>
+
+              </div>
+              <p class="self-introduction">
+                El Dr. Antonio Damasio es un profesor universitario; Profesor de neurociencia Dana Dornsife, Profesor de psicología, Profesor de filosofía, y director del Instituto del Cerebro y la Creatividad en la Unversidad del Sur de California; también es Profesor Adjunto en el Instituto Salk en La Jolla, California. El Dr. Damasio ha hecho contribuciones seminales al conocimiento de la base de procesos cerebrales de las emociones, los sentimientos, la toma de decisiones y la consciencia. El es el autor de numerosas publicaciones de artículos científicos (su Índice H de Google Scholar es 144; mas de 129,000 citaciones) y sus investigaciones han recibido continuo financiamiento federal por mas de 30 años. El es el recipiente de muchos premios (incluyendo el Premio Grawemeyer, 2014; el Premio Honda, 2010; el Premio Asturias en Ciencia y Tecnología, 2005; y el Premio Signoret, 2004, el cual compartió con su esposa Hanna Damasio).
+              </p>
+
+            </div>
+
+
+          </div>
+          <div class="row equal-height-columns">
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/bea.jpg" alt="">
+                  <h5>Dra. Beatriz Ilari
+                               <br/>
+                               <small>Co-Investigator</small>
+                             </h5>
+                </div>
+                <p class="self-introduction">
+                  Beatriz Ilari es Profesora Asociada de Educación de Música en la Universidad del Sur de California donde ella enseña cursos de nivel posgrado sobre la psicología de música, sociología de la educación de música, la música durante la niñez, y métodos investigativos.
+                  Ella ha conducido investigaciones extensas con bebes, niños de edad preescolar, y niños de edad escolar en los Estados Unidos, Brasil, Canadá, Japón, y México. Ella emplea varias estrategias en su trabajo para investigar diferentes aspectos
+                  del desarrollo musical y el crecimiento de infantes, niños, y adolescentes. Sus investigaciones son interdisciplinarias por naturaleza. Beatriz colabora con académicos de diversas disciplinas, incluyendo nuero-científicos del Instituto
+                  del Cerebro y la Creatividad de USC, y psicólogos y educadores del equipo de Investigaciones Avanzadas Interdisciplinarias sobre el Canto (AIRS). Actualmente, ella es la editora para Perspectivas: revista de la música de niñez temprana
+                  & movimiento y asociación (ECMMA), y también trabaja en consejos editoriales de revistas prestigiosas incluyendo Psicología de música,Musicae Scientiae,y Música y ciencia.
+                </p>
+
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6  text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image2-1.jpg" alt="">
+                  <h5>Priscilla Perez
+                                 <br/>
+                                 <small>Coordinadora del estudio</small>
+                               </h5>
+
+                </div>
+                <p class="self-introduction">
+                  Priscilla a trabajado para el proyecto del cerebro y la música desde el 2015 como entrevistadora de padres, traductora, y coordinadora del estudio. Ella desarrolló su interés en investigaciones con poblaciones poco estudiadas a través de su trabajo voluntario
+                  durante su tiempo como estudiante de la Universidad de California, Los Ángeles, donde estudió biología. A ella le gusta leer, escalar, y pasar tiempo con su gato, Pancho.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image3-1.jpg" alt="">
+                  <h5>Sarah Hennessy
+                                  <br/>
+                                  <small>Coordinadora del estudio</small>
+                                </h5>
+                </div>
+                <p class="self-introduction">
+                  Sarah se graduó de Occidental College en el 2017 con un titulo en psicología y asignatura secundaria en etnomusicología. Ella ha sido parte del proyecto del cerebro y la música desde el 2015, y su tiempo en el laboratorio ha cultivado su pasión por la
+                  intersección de la música y la ciencia. Durante su tiempo libre, Sarah da clases de violín, y lee libros bajo el sol del sur de California.
+                </p>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div class="row equal-height-columns">
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image4-1.jpg" alt="">
+                  <h5>Katrina Heine
+                               <br/>
+                               <small>Coordinadora de datos de nuero-imágenes</small>
+                             </h5>
+
+                </div>
+                <p class="self-introduction">
+                  Katrina se graduó de Kings College London en el 2016 con una maestría en neuroimagenología. Este es su segundo año con el proyecto de música y el cerebro, donde principalmente trabaja analizando las imágenes y datos de resonancia magnética. Cuando no
+                  esta en el laboratorio, le gusta jugar voleibol e ir a la playa.
+                </p>
+
+              </div>
+
+
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image5-1.jpg" alt="">
+                  <h5>Alison Wood
+                               <br/>
+                               <small>Coordinadora de datos de encefalografía </small>
+                             </h5>
+                </div>
+                <p class="self-introduction">
+                  Alison se graduó de Beloit College en el 2016 con un titulo en psicología y asignatura secundaria en música. Ella trabaja con la colección y análisis de los datos de encefalografía para el proyecto del cerebro y la música. Durante su tiempo libre, a Alison
+                  le gusta leer y tocar música.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image6-1.jpg" alt="">
+                  <h5>Gabriel Reigner
+                                <br/>
+                                <small>Asistente de investigaciones</small>
+                              </h5>
+
+                </div>
+                <p class="self-introduction">
+                  Gabriel es un estudiante de ultimo año estudiando neurociencia y ciencia cognitiva. Su experiencia en presentación musical y composición lo dirigieron al proyecto del cerebro y la música, donde a trabajado como asistente de investigaciones voluntario
+                  desde el 2016. Con estudios de posgrado acercándose, el desea explorar el campo de neurociencia cognitiva mas profundamente. Sus intereses incluyen surfear, mochilear, y fotografía.
+                </p>
+
+              </div>
+            </div>
+
+
+          </div>
+          <div class="row equal-height-columns">
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image7-1.jpg" alt="">
+                  <h5>Rohan Menon
+                               <br/>
+                               <small>Asistente de investigaciones</small>
+                             </h5>
+                </div>
+                <p class="self-introduction">
+                  Rohan es un estudiante de penúltimo año en la Universidad del Sur de California, donde estudia neurociencia computacional y filosofía ética. Esta encantado por ser parte del proyecto del cerebro y la música, donde trabaja para comprender el impacto del
+                  entrenamiento musical en el desarrollo cerebral. Afuera del laboratorio, Rohan es parte del equipo masculino de futbol de USC y también le gusta leer, escribir, y tocar el piano.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/samhita-1.jpg" alt="">
+                  <h5>Samhit Swamy
+                               <br/>
+                               <small>Asistente de investigaciones</small>
+                             </h5>
+                </div>
+                <p class="self-introduction">
+                  Sam es una estudiante de neurociencia en la Universidad del Sur de California con un énfasis en estudios pre-medicinales. Antes de unirse al proyecto del cerebro y la música, ella trabajo el laboratorio de Cahn en el Instituto del Cerebro y la Creatividad,
+                  enfocándose en estudios de electroencefalografía de estados meditativos. Sus aspiraciones son el campo de psiquiatría, y en investigar como incorporar terapias alternativas en la practica clínica. Criada en la ciudad sureña funky de
+                  Memphis, TN, ella creció rodeada de música de blues y soul y esta entusiasmada por incorporar su amor por la música en su afición investigativa.
+
+                </p>
+
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- End team -->
+
+  <!-- team -->
+  <section id="faq">
+    <div class="container">
+      <div class="g-pt-90 g-pb-70">
+        <div class="g-heading-v10 g-mb-65 text-center">
+          <h2><em class="block-name"><span>03.</span> Preguntas frecuentes
+</em> Preguntas frecuentes
+
+</h2>
+        </div>
+
+        <div class="tab-v1">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Preguntas frecuentes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">¿Qué es el EEG?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">¿Qué es MRI?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pills-contact-tab2" data-toggle="pill" href="#pills-contact2" role="tab" aria-controls="pills-contact2" aria-selected="false">Programe su cita</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <h4>¿Porque participar?</h4>
+                  <div style="float:right; clear: both;" align="center">
+                    <img src="./img/Image8.jpg" hspace="20" class="img-fluid rounded" width="300" alt="">
+                  </div>
+                  <p class="text-justify">Participación en un estudio investigativo es un regalo invaluable que une puede ofrecer a su comunidad y a la ciencia. Nuestro estudio investiga como los niños se desarrollan como resultado de la música y el arte, de este modo esperamos
+                    proveer información sobre los beneficios de la música y el arte al publico. Nuestra investigación podría ser usada para informar póliza de educación al nivel local, estatal, o nacional. Sin su ayuda, esto no podría ser posible. </p>
+
+                </div>
+                <div class="tab-in">
+                  <h4>¿Cómo es un dia en el laboratorio?</h4>
+                  <p class="text-justify">Cuando usted y su hijo/hija llegue a nuestras instalaciones, usted será recibido/a por uno de nuestros investigadores. Le informaremos brevemente sobre las actividades del dia y pedirle que firme unos formularios que declaran que usted
+                    entiende y esta de acuerdo con la participación voluntaria de la investigación. La participación incluye MRI (imagen por resonancia magnética) , EEG (electroencefalograma) , y otros juegos. La/o dirigirán a una cómoda sala de espera,
+                    donde tendrá muchas opciones de revistas, juegos, y refrescos. Después que termine la participación de su hijo/a, se le dara un regalo chico, y usted recibirá compensación por su tiempo.</p>
+                </div>
+                <div class="tab-in">
+                  <h4>¿Puedo traer mis otro/s hijo/a/s?</h4>
+                  <div style="float:right; clear: both;" align="center">
+                    <img src="./img/Image10.jpg" class="img-fluid rounded" hspace="20" vspace="0" width="300" alt="">
+                  </div>
+                  <p class="text-justify">¡Si! Tenemos un cuarto arreglado para usted y su familia. Tenemos juegos para niños, juguetes, y libros para colorear. También tenemos una variedad de asientos para padres que vengan sin otros niños. </p>
+
+                </div>
+                <div class="tab-in">
+                  <h4>¿Cómo puedo llegar al laboratorio?</h4>
+                  <p class="text-justify">Haga clic aquí para aprender sobre nuestras opciones de transporte, y para ver las direcciones a nuestras instalaciones.
+                  </p>
+
+                </div>
+                <div class="tab-in">
+                  <h4>¿Qué tan seguido se me pedirá participar?</h4>
+                  <p class="text-justify">Se le pedirá a su hijo/a que venga a dos visitas cada año. </p>
+                </div>
+                <div class="tab-in">
+                  <h4>¿Cómo puedo programar mis citas? </h4>
+                  <p class="text-justify">Haga clic aquí para programar su visita en la red, o llame a Priscilla al (323) 557- 3782. Estamos disponibles de lunes a jueves, y sábado a domingo de 9am-6pm. Si necesita reprogramar su cita, por favor llámenos o mándenos un email
+                    antes de tiempo. </p>
+                </div>
+                <div class="tab-in">
+                  <h4>¿Tiene alguna preocupación, pregunta, quejas?</h4>
+                  <p class="text-justify">No dude en compartir sus preocupaciones, preguntas o sugerencias para mejorar o quejas sobre nos otros. Puede llamarnos directamente o puede mandarnos un mensaje anónimo a mediante esta forma .</p>
+                </div>
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <h4>¿Qué es el EEG?</h4>
+                  <div style="float:right; clear: both;" align="center">
+                    <img src="./img/Image11.jpg" class="img-fluid rounded" hspace="20" width="300" alt="">
+                  </div>
+                  <p class="text-justify">EEG significa electroencefalograma, y es una técnica no-invasiva que graba la actividad eléctrica del cerebro. Ponemos una capa pequeña en la cabeza de su hijo/a y, usando alambres y receptores pequeños llamados electrodos, podemos ver
+                    la actividad cerebral de su hijo/a por los milisegundos. Las grabaciones de EEG en este estudio no son indicadas para el uso diagnostico y no reemplazan grabaciones de EEG clínicas.</p>
+
+                </div>
+                <div class="tab-in">
+                  <h4>¿Hay riesgos asociados con EEG?</h4>
+                  <p class="text-justify">No hay riesgos asociados con la técnica de grabación de EEG. </p>
+                </div>
+                <div class="tab-in">
+                  <h4>¿Hará mi hijo/a en el cuarto de EEG?</h4>
+                  <p class="text-justify">Su hijo se quedará aproximadamente 1.5 horas en la sala de EEG, incluyendo el tiempo de preparación y recesos. Su hijo/a verá caricaturas para niños y jugará unos cortos juegos de computadora mientras grabamos su actividad cerebral.
+                    </p>
+                </div>
+                <div class="tab-in">
+                  <h4>¿Cómo voy a saber que mi hijo/a esta cómodo durante el EEG?</h4>
+                  <p class="text-justify">Antes que empecemos, le explicaremos a su hijo/a el procedimiento de EEG. Ninguna parte del procedimiento de EEG es incómodo. Si, en algún momento su hijo/a se siente incómodo, podrá descontinuar su participación. Durante el procedimiento
+                    de EEG, tomamos muchos recesos cortos para que su hijo/a pueda estirarse y comer unos snacks.</p>
+                </div>
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <h4>¿Qué es MRI?</h4>
+                  <div style="float:right; clear: both;" align="center">
+                    <img src="./img/Image24.jpg" class="img-fluid rounded" hspace="20" width="300" alt="">
+                  </div>
+                  <p class="text-justify">MRI significa imagen por resonancia magnética. MRI es una técnica de imágenes no invasiva que utiliza fuertes campos magnéticos y ondulas de radio para crear imágenes del cerebro. La técnica de MRI NO utiliza o crea rayos X o radiación.
+                    NO se le dará agentes de contraste (químicos que ayudan en crear imágenes de ciertos tipos de tejidos cerebrales o procesos) para MRI a su hijo/a. Los escaneos de MRI NO son para uso medico y NO se pueden usar para propostios de diagnosticar;
+                    NO pueden reemplazar un escaneo de MRI clínico.
+                  </p>
+                  <p class="text-justify">Para ver un video sobre el procedimiento de MRI apto para menores, haga clic aquí </p>
+                </div>
+                <div class="tab-in">
+                  <h4>¿Hay riesgos con MRI?</h4>
+                  <p class="text-justify">En este momento, no hay riesgos conocidos con el procedimiento de MRI, porque la fuerza de los campos magnéticos usados han sido evaluados a no causar daño. Evaluamos que los niveles de fuerza de los campos magnéticos son seguros y menos
+                    dañinos que el comparable escaneo de tomografía computarizada (CT scan) que usa rayos X. Su hijo/a podrá sentir ansiedad o claustrofobia durante el escaneo, y si eso ocurre su hijo podrá descontinuar su participación en el escaneo
+                    inmediatamente con el uso de un botón para llamarnos.</p>
+                </div>
+                <div class="tab-in">
+                  <h4>¿Qué hará mi hijo/a durante el escaneo de MRI?</h4>
+                  <p class="text-justify">Se le pedirá a su hijo/a que se acueste en la maquina de MRI por aproximadamente 45 minutos y no mas de 60 minutos. Durante cada sesión, se le pedirá a su hijo/a que mantenga su cabeza inmóvil mientras se completan los escaneos de MRI.</p>
+                  <p class="text-justify">Durante el escaneo, le pondremos tapones de oídos a su hijo/a para reducir el ruido de los golpeteos repetitivos producidos por la maquina de MRI. Durante ciertas secuencias del escaneo, su hijo/a también podrá sentir vibraciones en
+                    la mesa donde se acostará, esto es una parte normal del proceso. Su hijo/a puede ver una película mientras este dentro del escáner para ayudarle a quedarse quieto mientras la maquina este escaneando. Su hijo/a puede traer una película
+                    o puede escoger de nuestra selección de películas para niños como Toy Story, Frozen etc.
+                  </p>
+                </div>
+                <div class="tab-in">
+                  <h4>¿Qué tal si mi hijo/a se asusta?</h4>
+                  <p class="text-justify">Usted tendrá la opción de quedarse con su hijo/a dentro de la sala de MRI y agarrarle la mano. Si escoge quedarse dentro la sala, le ofreceremos tapones de oídos para reducir los ruidos producidos por el escáner de MRI, los ruidos suenan
+                    como golpeteos y zumbidos repetitivos. </p>
+                  <p class="text-justify">Adicionalmente, cada aspecto del estudio es completamente a base voluntario. Aunque nosotros quisiéramos que cada niño/a participe en el escaneo de MRI, entendemos las necesidades y los deseos de los niños. Si su hijo/a decide que no
+                    quiere participar, durante cualquier momento, lo sacaremos de la maquina de MRI inmediatamente. Proveemos un botón para que su hijo/a nos pueda llamar y parar el escáner durante cualquier momento del escaneo. </p>
+                </div>
+                <div class="tab-in">
+                  <h4>¿Cómo voy a saber que mi hijo/a esta cómodo dentro del MRI?</h4>
+                  <p class="text-justify">Antes de que entremos a la sala de MRI, le explicaremos con mucho detalle como será el procedimiento de MRI, incluyendo como se va a ver, sentir, y escuchar. Su hijo/a practicará en una maquina de MRI de imitación, durante esta practica,
+                    aseguraremos que su hijo/a se sienta completamente cómodo y entienda el proceso. Durante el escaneo, le proveeremos a su hijo/a cobijas, almohadas, y un peluche si lo desea. Durante todo el tiempo del escaneo, su hijo/a podrá hablar
+                    con nosotros y nosotros podremos hablar con el/ella. También podremos quedarnos dentro del la sala de MRI con su hijo/a si lo prefiere. </p>
+                </div>
+                <div class="tab-in">
+                  <h4>¿Qué mas debería saber sobre MRI?</h4>
+                  <p class="text-justify">Si su hijo/a tiene: un marcapasos cardiaco, un clip metálico dentro de su cuerpo, o algún pedazo de metal dentro del ojo NO podrá hacer el estudio de MRI porque las piezas de metal son atraídas al imán (dentro de la maquina) y se calentarán.
+                    Objectos de metal dentro de su bolsillo serán removidos porque serán atraídos al imán y pueden volar fuera del bolsillo. Esto incluye: llaves, joyas, clips de dinero, sujetapapeles, seguros, horquillas/pasadores, o hebilla de pelo/pasador.
+                    Si decide quedarse dentro la sala de MRI con su hijo/a, le pediremos que se quite todos los objetos metálicos y electrónicas que se encuentren en su persona antes de entrar a la sala. Adicionalmente, objetos como los relojes, tarjetas
+                    de crédito, y audífonos podrían ser dañados con la presencia de un campo magnético. Se le proveerá un casillero a usted y su hijo para asegurar sus pertenencias y objetos de valor.
+                  </p>
+                </div>
+                <!-- <div class="tab-in">
+                                   <h4>Have a concern/question/complaint?</h4>
+                                   <p class="text-justify">Feel free to share any concerns, questions, suggestions for improvement or complaints with us. You can call us directly or you can send us an anonymous message through this form. </p>
+                              </div> -->
+
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact2-tab">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <h4>Programación de citas
+</h4>
+                  <p class="text-justify">Para programar su cita por favor llame a Priscilla al (323) 557-3782.
+                  </p>
+                  <p class="text-justify">Estamos disponibles de lunes a jueves, y sábado a domingo de 9am-6pm. Si necesita cambiar su cita, por favor llámenos o mándenos un email antes de si cita.</p>
+                  <p style="text-align:center;"> <img src="./img/Image12.jpg" class="img-fluid rounded" width="300" alt=""></p>
+
+                </div>
+
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+  <!-- End faq -->
+
+  <!-- team -->
+  <section id="kidscorner">
+    <div class="container">
+      <div class="g-pt-90 g-pb-70">
+        <div class="g-heading-v10 g-mb-65 text-center">
+          <h2><em class="block-name"><span>03.</span> Esquina para niños
+</em> <span class="kc-title">¡Bienvenidos a la esquina para niños!</span>
+</h2>
+        </div>
+        <p style="text-align:center;"><img usemap="#kidscornerimg" src="./img/SpanishKidsCorner.png" width="400" alt=""></p>
+
+        <!-- <map name="image-map">
+    <area target="" alt="mri experience" title="mri experience"  coords="221,9,123,19,55,48,37,74,16,139,19,171,42,199,78,204,135,142,170,113,192,57" shape="poly">
+    <area target="" alt="eeg experience" title="eeg experience"  coords="251,11,208,35,201,56,190,81,179,122,201,117,226,112,272,116,332,113,352,93,346,70,279,18,264,10" shape="poly">
+    <area target="" alt="mri video" title="mri video"  coords="199,125,251,119,295,126,323,132,318,163,297,194,260,206,221,214,186,216,171,229,134,223,113,200,127,156,158,138" shape="poly">
+</map> -->
+
+        <div class="tab-v1">
+          <map name="kidscornerimg" id="kidscornerimg">
+                        <ul class="nav nav-pills mb-3" id="pills-tab2" role="tablist">
+                          <li class="nav-item">
+                            <area shape="poly"  id="pills-welcome-tab" alt="welcome" title="welcome"   coords="0,0,0"  data-toggle="pill" href="#pills-welcome"  role="tab" aria-controls="pills-home" aria-selected="true"/>
+                          </li>
+                          <li class="nav-item">
+                            <area shape="poly"  id="pills-eeg-tab" alt="eeg experience" title="eeg experience"   coords="251,11,208,35,201,56,190,81,179,122,201,117,226,112,272,116,332,113,352,93,346,70,279,18,264,10"  data-toggle="pill" href="#pills-eeg" role="tab" aria-controls="pills-home" aria-selected="false"/>
+                          </li>
+                            <li class="nav-item">
+                              <area shape="poly" alt="mri experience" title="mri experience"  coords="221,9,123,19,55,48,37,74,16,139,19,171,42,199,78,204,135,142,170,113,192,57"  id="pills-mri-tab" data-toggle="pill" href="#pills-mri" role="tab" aria-controls="pills-profile" aria-selected="false"  />
+                              <!-- <a class="nav-link" id="pills-mri-tab" data-toggle="pill" href="#pills-mri" role="tab" aria-controls="pills-profile" aria-selected="false">What is EEG?</a> -->
+                            </li>
+                            <li class="nav-item">
+                              <area shape="poly" alt="mri video" title="mri video"  coords="199,125,251,119,295,126,323,132,318,163,297,194,260,206,221,214,186,216,171,229,134,223,113,200,127,156,158,138"  id="pills-mriv-tab" data-toggle="pill" href="#pills-mriv" role="tab" aria-controls="pills-contact" aria-selected="false" />
+                            </li>
+                        </ul>
+                      </map>
+          <div class="tab-content" id="pills-tabContent2">
+            <div class="tab-pane fade show active" id="pills-welcome" role="tabpanel" aria-labelledby="pills-welcome-tab">
+              <div class="tab-pane fade show active" id="welcome" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <h4 class="kc-welcome-title">¡Bienvenidos a la esquina para niños! Aquí es donde encontraras información sobre como un día en USC se va a ver, sentir, y escuchar.
+</h4>
+                  <p class="text-justify kc-welcome-p">¡Primero, nos gustaría darte muchas GRACIAS! En venir a USC estas ayudando a nuestros investigadores a descubrir y entender como el cerebro cambia y se desarrolla mientras estas creciendo. También nos estas ayudando en saber como la
+                    música y el arte te influye a ti y a otros niños como tú. Ahora eres un científico juvenil que ayuda al mundo crecer y expandir con información.</p>
+                  <p class="text-justify kc-welcome-explore">Haz clic a las pestañas para explorar nuestro proyecto.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-eeg" role="tabpanel" aria-labelledby="pills-eeg-tab">
+              <div class="tab-pane fade show active" id="eeg" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <p style="text-align:center;"><img src="./img/eeglinkspanish1.jpg" class="img-fluid" alt=""></p>
+                  <p style="text-align:center;"><img src="./img/eeglinkspanish2.jpeg" class="img-fluid" alt=""></p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-mri" role="tabpanel" aria-labelledby="pills-mri-tab">
+              <div class="tab-pane fade show active" id="mri" role="tabpanel" aria-labelledby="mri-tab">
+                <div class="tab-in">
+                  <p style="text-align:center;"><img src="./img/mrilinkspanish1.jpeg" class="img-fluid" alt=""></p>
+                  <p style="text-align:center;"><img src="./img/mrilinkspanish2.jpeg" class="img-fluid" alt=""></p>
+                </div>
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-mriv" role="tabpanel" aria-labelledby="pills-mriv-tab">
+              <div class="tab-pane fade show active" id="mriv" role="tabpanel" aria-labelledby="mriv-tab">
+                <div class="tab-in">
+                  <div class="full-page">
+                    <!-- <br/>
+                                  <h5 class="h5">English MRI Video</h5>
+                                  <br/>
+                                  <div class="embed-responsive embed-responsive-21by9">
+                                      <p class="img-center"><iframe id="envideo" class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/4_O8tisCBXg?rel=0&amp;ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+                                  </div> -->
+                    <br/>
+                    <h5 class="h5">Spanish MRI Video</h5>
+                    <br/>
+                    <div class="embed-responsive embed-responsive-21by9">
+                      <p class="img-center"><iframe id="spvideo" class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/1_WgTeZxaBc?rel=0&amp;ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact2-tab">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <h4>Appointment Scheduling</h4>
+                  <p class="text-justify">You may call Priscilla at (323) 557- 3782. </p>
+                  <p class="text-justify">We are available Monday-Thursday 9am-6pm, and Saturday and Sunday 9am-6pm. If you need to reschedule a visit, please call or email us before your visit time! </p>
+                  <p style="text-align:center;"> <img src="./img/Image12.jpg" class="img-fluid rounded" width="300" alt=""></p>
+
+                </div>
+
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+  <!-- End faq -->
+
+
+
+  <section id="gettinghere" class="badge-warning text-dark">
+    <div class="container">
+      <div class="g-pt-90 g-pb-70">
+        <div class="g-heading-v10 g-mb-65 text-center">
+          <h2><em class="block-name"><span>04.</span> Como llegar aquí
+               </em> Como llegar aquí
+              </h2>
+        </div>
+
+        <div class="tab-pane " id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact2-tab">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="tab-in">
+              <h4>Direcciones para llegar al Instituto del Cerebro y la Creatividad</h4>
+              <p class="text-justify">
+                Desde la estructura de estacionamiento A (sobre la calle Downey Way), camine este sobre Downey Way. En la primera oportunidad, dé una izquierda hacia la pasarela peatonal. Camine derecho hasta que vea el Instituto del Cerebro y la Creatividad (Brian and
+                Creativity Institute) ha su izquierda. Encontrara un poste grande y metálico al frente. Cuando llegue a la puerta, toque el timbre y la recepcionista lo dejará entrar. En el recibidor, se registrará con la recepcionista y ella llamará
+                a Sarah y Priscilla. Si se pierde, no dude en llamar a Sarah o Priscilla al <a href="tel:2137400928">213-740-0928<a/> (oficina) o al <a href="tel:3235573782">323-557-3782</a> (celular).</p>
+
+              <p style="text-align:center;"> <img src="./img/Image13.png" class="img-fluid rounded" width="500" alt=""></p>
+
+
+            </div>
+
+            <div class="tab-in">
+              <h4>Para familias:</h4>
+              <p class="text-justify">Para familias usamos el servicio de <a href="https://lyft.com" target="_blank">Lyft</a>. Para mas información sobre este servicio, haga clic aquí. Podemos ordenar los carros de Lyft en cuanto nos deje saber que estén listos para venir al
+                laboratorio.
+              </p>
+
+            </div>
+
+            <div class="tab-in">
+              <h4>Para niños viajando solos:</h4>
+              <p class="text-justify">Si desea mandar su hijo/a al laboratorio solo/a, utilizamos un servicio de carro especialmente diseñado para eso, se llama HopSkipDrive. Este servicio emplea choferes con experiencia en cuidado de niños y revisión de antecedentes extensiva.
+                Para mas información, haga clic <a href="https://hopskipdrive.com" target="_blank">aquí</a>. Si gustaría emplear esta opción, favor de notificarnos con un día de anticipación. </p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; 2018</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+
+
+  <script type="text/javascript">
+    // $('.selectpicker').selectpicker('val', 'English');
+    // var language = getCookie('language');
+    // if(language == "") {
+    //   setCookie('language', 'Spanish', 100);
+    //   // $('.selectpicker').selectpicker('val', 'Spanish');
+    //   document.getElementById("languageChange").value = 'Spanish';
+    // }else if(language == "Spanish"){
+    //   // $('.selectpicker').selectpicker('val', 'Spanish');
+    //   document.getElementById("languageChange").value = 'Spanish';
+    //   redirect("Spanish");
+    // }else {
+    //   document.getElementById("languageChange").value = 'English';
+    //
+    //   // $('.selectpicker').selectpicker('val', 'English');
+    //   redirect("English");
+    // }
+
+
+    function languageChange(val) {
+
+      setCookie('language', val, 100);
+      if (val == "English") {
+        redirect("English");
+      } else {
+        redirect("Spanish");
+      }
+
+
+    }
+
+    function redirect(val) {
+      if (val == "English") {
+        window.location.href = "index.html";
+      } else {
+        window.location.href = "spanish.html";
+      }
+    }
+
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+
+    $(function() {
+      // To style only selects with the selectpicker class
+
+      $("[data-toggle='popover']").popover({
+        html: true,
+        placement: 'auto',
+        container: 'body',
+        trigger: 'click'
+      });
+    });
+
+    function jump(name) {
+      if (name == "Hanna") {
+        window.open(
+          'https://dornsife.usc.edu/cf/faculty-and-staff/faculty.cfm?pid=1008329',
+          '_blank' // <- This is what makes it open in a new window.
+        );
+      } else {
+        window.open(
+          'https://dornsife.usc.edu/cf/faculty-and-staff/faculty.cfm?pid=1008328',
+          '_blank' // <- This is what makes it open in a new window.
+        );
+      }
+    }
+  </script>
+
+</body>
+
+</html>

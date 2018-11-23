@@ -1,12 +1,872 @@
-﻿<!DOCTYPE HTML><html><head><style id="wiz_custom_css">html, .wiz-editor-body {font-size: 12pt;}.wiz-editor-body {font-family: Helvetica, "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei UI", SimSun, SimHei, arial, sans-serif;line-height: 1.7;margin: 0 auto;padding: 20px 16px;padding: 1.25rem 1rem;}.wiz-editor-body h1,.wiz-editor-body h2,.wiz-editor-body h3,.wiz-editor-body h4,.wiz-editor-body h5,.wiz-editor-body h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}.wiz-editor-body h1 {font-size:20pt;font-size:1.67rem;}.wiz-editor-body h2 {font-size:18pt;font-size:1.5rem;}.wiz-editor-body h3 {font-size:15pt;font-size:1.25rem;}.wiz-editor-body h4 {font-size:14pt;font-size:1.17rem;}.wiz-editor-body h5 {font-size:12pt;font-size:1rem;}.wiz-editor-body h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}.wiz-editor-body div,.wiz-editor-body p,.wiz-editor-body ul,.wiz-editor-body ol,.wiz-editor-body dl,.wiz-editor-body li {margin:8px 0;}.wiz-editor-body blockquote,.wiz-editor-body table,.wiz-editor-body pre,.wiz-editor-body code {margin:8px 0;}.wiz-editor-body .CodeMirror pre {margin:0;}.wiz-editor-body ul,.wiz-editor-body ol {padding-left:32px;padding-left:2rem;}.wiz-editor-body ol.wiz-list-level1 > li {list-style-type:decimal;}.wiz-editor-body ol.wiz-list-level2 > li {list-style-type:lower-latin;}.wiz-editor-body ol.wiz-list-level3 > li {list-style-type:lower-roman;}.wiz-editor-body blockquote {padding: 0 12px;}.wiz-editor-body blockquote > :first-child {margin-top:0;}.wiz-editor-body blockquote > :last-child {margin-bottom:0;}.wiz-editor-body img {border:0;max-width:100%;height:auto !important;margin:2px 0;}.wiz-editor-body table {border-collapse:collapse;border:1px solid #bbbbbb;}.wiz-editor-body td,.wiz-editor-body th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-word;box-sizing: border-box;}.wiz-hide {display:none !important;}
+<!DOCTYPE html>
+<html lang="en">
 
-html, .wiz-editor-body {
-  font-family:'Helvetica Neue';
-  font-size:15px;
-  background-color:#FFFFFF;
-} 
-</style></head><body class="wiz-editor-body" style="opacity: 1;" ><div><span style="background-color: rgb(245, 245, 245); color: rgb(51, 51, 51); font-size: 4.2rem; font-weight: bold;"><span data-wiz-span="data-wiz-span" style="font-size: 3rem;">1.What is version&nbsp;control?</span></span><br></div><div><br></div><div><img border="0" class="" width="728" height="515" src="git presentation_files/44885759.png"></div><div><br></div><div><br></div><div><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></div><div style="font-family: &quot;Helvetica Neue&quot;;"><span style="background-color:rgb(245, 245, 245);color:rgb(51, 51, 51);font-size:4.2rem;"><span data-wiz-span="data-wiz-span" style="font-size:3rem;"><b>2.What is Git?</b></span></span></div><div><br></div><div><img border="0" class="" width="730" height="401" src="git presentation_files/44150432.png"></div><div><img border="0" class="" width="848" height="362" src="git presentation_files/45045155.png"></div><div><br></div><div><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);">3.How does Git work?</b><br></div><div><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);"><br></b></div><div><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);"><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><img style='color: rgb(0, 0, 0); font-family: "Helvetica Neue"; font-size: 1rem; background-color: rgb(255, 255, 255);' class="" width="944" height="274" src="git presentation_files/36852926.png"><br></b></div><div><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);"><br></b></div><div><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);"><b style="font-family: &quot;Helvetica Neue&quot;;">4.Git Commands</b><br></b></div><div><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);"><b style="font-family: &quot;Helvetica Neue&quot;;"><br></b></b></div><div><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);"><b style="font-family: &quot;Helvetica Neue&quot;;"><meta charset="utf-8"></b></b></div><div class="wiz-table-container" style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);position:relative;padding:0px"><div class="wiz-table-body"><table class="confluenceTable" style="width: 725px; color: rgb(23, 43, 77); font-size: 0.933rem; background-color: rgb(255, 255, 255);"><tbody><tr><th class="confluenceTh" style="background-color: rgb(250, 251, 252); color: rgb(66, 82, 110); width: 150px;">Git task</th><th class="confluenceTh" style="background-color: rgb(250, 251, 252); color: rgb(66, 82, 110); width: 174px;">Notes</th><th width="400" class="confluenceTh" style="background-color: rgb(250, 251, 252); color: rgb(66, 82, 110); width: 400px;">Git commands</th></tr><tr><td colspan="1" class="confluenceTd" style="width: 150px;"><strong><a class="external-link" href="https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config" style="color:rgb(53, 114, 176);text-decoration:none;">Tell Git who you are</a></strong></td><td colspan="1" class="confluenceTd" style="width: 174px;">Configure the author name and email address to be used with your commits.<p>Note that Git<span>&nbsp;</span><a class="external-link" href="http://stackoverflow.com/questions/26159274/is-it-possible-to-have-a-trailing-period-in-user-name-in-git/26219423#26219423" style="color:rgb(53, 114, 176);text-decoration:none;">strips some characters</a><span>&nbsp;</span>(for example trailing periods) from<span>&nbsp;</span><code>user.name</code>.</p></td><td colspan="1" class="confluenceTd" style="width: 400px;"><code>git config --global user.name "Sam Smith"</code><p><code>git config&nbsp;--global&nbsp;user.email sam@example.com</code></p></td></tr><tr><td class="confluenceTd" style="width: 150px;"><strong><a class="external-link" href="https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init" style="color:rgb(53, 114, 176);text-decoration:none;">Create a new local repository</a></strong></td><td class="confluenceTd" style="width: 174px;">&nbsp;</td><td class="confluenceTd" style="width: 400px;"><pre>git init</pre></td></tr><tr><td rowspan="2" class="confluenceTd" style="width: 150px;"><strong><a class="external-link" href="https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone" style="color:rgb(53, 114, 176);text-decoration:none;">Check out a repository</a></strong></td><td class="confluenceTd" style="width: 174px;">Create a working copy of a local repository:</td><td class="confluenceTd" style="width: 400px;"><pre>git clone /path/to/repository</pre></td></tr><tr><td class="confluenceTd" style="width: 174px;">For a remote server, use:</td><td class="confluenceTd" style="width: 400px;"><pre>git clone username@host:/path/to/repository</pre></td></tr><tr><td class="confluenceTd" style="width: 150px;"><strong><a class="external-link" href="https://www.atlassian.com/git/tutorials/saving-changes#git-add" style="color:rgb(53, 114, 176);text-decoration:none;">Add files</a></strong></td><td class="confluenceTd" style="width: 174px;">Add one or more files to staging (index):</td><td class="confluenceTd" style="width: 400px;"><pre>git add &lt;filename&gt;
+<head>
 
-git add *</pre></td></tr><tr><td rowspan="2" class="confluenceTd" style="width: 150px;"><strong><a class="external-link" href="https://www.atlassian.com/git/tutorials/saving-changes#git-commit" style="color:rgb(53, 114, 176);text-decoration:none;">Commit</a></strong></td><td colspan="1" class="confluenceTd" style="width: 174px;">Commit changes to head (but not yet to the remote repository):</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git commit -m "Commit message"</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">Commit any files you've added with<span>&nbsp;</span><code>git add</code>, and also commit any files you've changed since then:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git commit -a</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 150px;"><strong><a class="external-link" href="https://www.atlassian.com/git/tutorials/syncing#git-push" style="color:rgb(53, 114, 176);text-decoration:none;">Push</a></strong></td><td colspan="1" class="confluenceTd" style="width: 174px;">Send changes to the master branch of your remote repository:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git push origin master</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 150px;"><strong><a class="external-link" href="https://www.atlassian.com/git/tutorials/inspecting-a-repository#git-status" style="color:rgb(53, 114, 176);text-decoration:none;">Status</a></strong></td><td colspan="1" class="confluenceTd" style="width: 174px;">List the files you've changed and those you still need to add or commit:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git status</pre></td></tr><tr><td rowspan="2" class="confluenceTd" style="width: 150px;"><strong><a class="external-link" href="https://www.atlassian.com/git/tutorials/syncing#git-remote" style="color:rgb(53, 114, 176);text-decoration:none;">Connect to a remote repository</a></strong></td><td colspan="1" class="confluenceTd" style="width: 174px;">If you haven't connected your local repository to a remote server, add the server to be able to push to it:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><code>git remote add origin &lt;server&gt;</code></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">List all currently configured remote repositories:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><code>git remote -v</code></td></tr><tr><td rowspan="7" class="confluenceTd" style="width: 150px;"><strong><a class="external-link" href="https://www.atlassian.com/git/tutorials/using-branches" style="color:rgb(53, 114, 176);text-decoration:none;">Branches</a></strong></td><td colspan="1" class="confluenceTd" style="width: 174px;">Create a new branch and switch to it:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git checkout -b &lt;branchname&gt;</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">Switch from one branch to another:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git checkout &lt;branchname&gt;</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">List all the branches in your repo, and also tell you what branch you're currently in:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git branch</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">Delete the feature branch:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git branch -d &lt;branchname&gt;</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">Push the branch to your remote repository, so others can use it:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git push origin &lt;branchname&gt;</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">Push all branches to your remote repository:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git push --all origin</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">Delete a branch on your remote repository:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git push origin :&lt;branchname&gt;</pre></td></tr><tr><td rowspan="4" class="confluenceTd" style="width: 150px;"><strong><a class="external-link" href="https://www.atlassian.com/git/tutorials/syncing" style="color:rgb(53, 114, 176);text-decoration:none;">Update from the remote repository</a></strong></td><td colspan="1" class="confluenceTd" style="width: 174px;">Fetch and merge changes on the remote server to your working directory:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><code>git pull</code></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">To merge a different branch into your active branch:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git merge &lt;branchname&gt;</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">View all the merge conflicts:<p>View the conflicts against the base file:</p><p>Preview changes, before merging:</p></td><td colspan="1" class="confluenceTd" style="width: 400px;"><code>git diff</code><p><code>git diff --base &lt;filename&gt;</code></p><pre>git diff &lt;sourcebranch&gt; &lt;targetbranch&gt;</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">After you have manually resolved any conflicts, you mark the changed file:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git add &lt;filename&gt;</pre></td></tr><tr><td rowspan="3" class="confluenceTd" style="width: 150px;"><strong>Tags</strong></td><td colspan="1" class="confluenceTd" style="width: 174px;">You can use tagging to mark a significant changeset, such as a release:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git tag 1.0.0 &lt;commitID&gt;</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">CommitId is the leading characters of the changeset ID, up to 10, but must be unique. Get the ID using:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git log</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">Push all tags to remote repository:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git push --tags origin</pre></td></tr><tr><td rowspan="2" class="confluenceTd" style="width: 150px;"><strong><a class="external-link" href="https://www.atlassian.com/git/tutorials/undoing-changes" style="color:rgb(53, 114, 176);text-decoration:none;">Undo local changes</a></strong></td><td colspan="1" class="confluenceTd" style="width: 174px;">If you mess up, you can replace the changes in your working tree with the last content in head:<p>Changes already added to the index, as well as new files, will be kept.</p></td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git checkout -- &lt;filename&gt;</pre></td></tr><tr><td colspan="1" class="confluenceTd" style="width: 174px;">Instead, to drop all your local changes and commits, fetch the latest history from the server and point your local master branch at it, do this:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><pre>git fetch origin
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-git reset --hard origin/master</pre></td></tr><tr><td class="confluenceTd" style="width: 150px;"><span style="color:rgb(0, 0, 0);"><strong>Search</strong></span></td><td colspan="1" class="confluenceTd" style="width: 174px;">Search the working directory for<span>&nbsp;</span><code>foo()</code>:</td><td colspan="1" class="confluenceTd" style="width: 400px;"><code>git grep "foo()"</code></td></tr></tbody></table></div></div><div><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);"><b style="font-family: &quot;Helvetica Neue&quot;;"><br></b></b></div><div><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);"><b style="font-family: &quot;Helvetica Neue&quot;;"><b style="font-family: &quot;Helvetica Neue&quot;;"><b style="font-family:&quot;Helvetica Neue&quot;;">5.Git Reset vs Revert vs Checkout reference</b></b><br></b></b></div><div><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);"><b style="font-family: &quot;Helvetica Neue&quot;;"><b style="font-family: &quot;Helvetica Neue&quot;;"><b style="font-family:&quot;Helvetica Neue&quot;;"><br></b></b></b></b></div><div><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);"><meta charset="utf-8"><div class="wiz-table-container" style="position: relative; padding: 0px;"><div class="wiz-table-body"><table style="font-size: 0.933rem; color: rgb(77, 77, 77);"><thead><tr><th>Command</th><th>Scope</th><th class="">Common use cases</th></tr></thead><thead><tr><td><code style="color: rgb(51, 51, 51);">git reset</code></td><td class="">Commit-level</td><td>Discard commits in a private branch or throw away uncommited changes</td></tr><tr><td><code style="color: rgb(51, 51, 51);">git reset</code></td><td class="">File-level</td><td class="">Unstage a file</td></tr><tr><td><code style="color: rgb(51, 51, 51);">git checkout</code></td><td>Commit-level</td><td class="">Switch between branches or inspect old snapshots</td></tr><tr><td><code style="color: rgb(51, 51, 51);">git checkout</code></td><td class="">File-level</td><td>Discard changes in the working directory</td></tr><tr><td><code style="color: rgb(51, 51, 51);">git revert</code></td><td class="">Commit-level</td><td>Undo commits in a public branch</td></tr><tr><td><code style="color: rgb(51, 51, 51);">git revert</code></td><td class="">File-level</td><td class="">(N/A)</td></tr></thead></table></div></div><br></b></div><div><b style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245);"><b style="font-family: &quot;Helvetica Neue&quot;;"><b style="font-family:&quot;Helvetica Neue&quot;;"><b style="font-family:&quot;Helvetica Neue&quot;;"><b style="font-family:&quot;Helvetica Neue&quot;;">6.Branch</b></b></b></b><br></b></div><div><br style="font-family:&quot;Helvetica Neue&quot;;font-weight:bold;color:rgb(51, 51, 51);font-size:3rem;background-color:rgb(245, 245, 245)"></div><div style="color:rgb(51, 51, 51);font-family:&quot;Helvetica Neue&quot;;font-size:3rem;background-color:rgb(245, 245, 245)"><img border="0" class="" src="git presentation_files/46964081.png"></div><div><br></div><div><br></div><div><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><b style="font-family:&quot;Helvetica Neue&quot;;color:rgb(51, 51, 51);font-size:3rem;background-color:rgb(245, 245, 245);"><b style="font-family:&quot;Helvetica Neue&quot;;"><b style="font-family:&quot;Helvetica Neue&quot;;"><b style="font-family:&quot;Helvetica Neue&quot;;"><b style="font-family:&quot;Helvetica Neue&quot;;">7.Build a Github-Page</b></b></b></b></b><br></div><div><br style="font-family:&quot;Helvetica Neue&quot;;font-weight:bold;color:rgb(51, 51, 51);font-size:3rem;background-color:rgb(245, 245, 245)"></div></body></html>
+  <title>Tower Defence</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu|Boogaloo|Bubblegum+Sans|Cabin+Sketch|Love+Ya+Like+A+Sister" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+
+
+</head>
+<style type="text/css">
+  h1#usclogo {
+    float: right;
+    width: 198px;
+    height: 60px;
+    margin: 0;
+  }
+
+  h1#usclogo a {
+    display: block;
+    width: 176px;
+    height: 38px;
+    padding: 11px;
+    background-color: #900; // cardinal
+    background: url(usc-shield-name-white.png) 0 11px no-repeat;
+    text-indent: -9999px;
+  }
+
+  #faq {
+    background-color: #F5F5F5;
+  }
+
+  #team {
+    background: #f7fafc;
+    padding: 0px;
+  }
+
+  .self-introduction {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .65);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
+
+  .team-box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .15);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 2px;
+    transition: all .3s;
+  }
+
+  .time-line {
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 20px;
+  }
+
+  .brief-p {
+    font-size: 12px;
+  }
+
+  .popover {
+    max-width: 600px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    /* width: 100%; */
+  }
+
+  .navbar-nav {
+    margin-right: 50px;
+  }
+</style>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#">
+          <img src="./img/fakelogo.png" width="250" height="50" alt="">
+        </a>
+      <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Video</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#faq">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#kidscorner">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#gettinghere">How to play</a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <select onchange="languageChange(this.value)" id="languageChange" class="selectpicker" data-width="95" data-style="btn-warning">
+                <option value="English">English</option>
+                <option value="Spanish">Español</option>
+
+              </select>
+
+          </li> -->
+
+
+
+        </ul>
+
+
+      </div>
+
+    </div>
+    <img src="./img/usclogo.png" width="auto" height="40" alt="">
+  </nav>
+
+  <!-- <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>Welcome to Scrolling Nav</h1>
+        <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
+      </div>
+    </header> -->
+
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('img/b1.png');background-position: center; background-repeat: no-repeat; background-size: cover;">
+          <div class="carousel-caption d-none d-md-block">
+            <!-- <h3>First Slide</h3>
+              <p>This is a description for the first slide.</p> -->
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('img/b1.png');background-position: center; background-repeat: no-repeat; background-size: cover;">
+          <div class="carousel-caption d-none d-md-block">
+            <!-- <h3>Second Slide</h3>
+              <p>This is a description for the second slide.</p> -->
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('img/b1.png');background-position: center; background-repeat: no-repeat; background-size: cover;">
+          <div class="carousel-caption d-none d-md-block">
+            <!-- <h3>Third Slide</h3>
+              <p>This is a description for the third slide.</p> -->
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+  </header>
+
+
+  <!-- about -->
+  <section id="about">
+    <div class="container">
+      <div class="g-pt-90">
+        <div class="g-heading-v10 g-mb-30 text-center" >
+          <h2>
+                           <em class="block-name">
+                             <span>01.</span>
+                             Video
+                           </em>
+                           Video
+                  </h2>
+          <p  style="text-align:center;max-width: 1000px;"><iframe id="envideo" width="966" height="543" class="embed-responsive-item" src="https://www.youtube.com/embed/uvCKyNbpFVo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+          <!-- <p>
+            The goal of the MUSIC, ARTS and CHILD DEVELOPMENT research project is to investigate the impact of arts and music training on children’s cognitive, emotional, social, and brain development. This research project is a collaborative effort between
+            <a target="_blank" href="https://dornsife.usc.edu/bci/">USC Brain and Creativity Institute</a>, the <a href="https://www.laphil.com/education/local-programs/youth-orchestra-los-angeles/" target="_blank">Los Angeles Philharmonic YOLA program</a>            and <a href="https://www.caminonuevo.org/" target="_blank">Camino Nuevo Charter Academy</a>.
+          </p>
+          <br/>
+          <a href="https://www.laphil.com/" target="_blank"><img src="./img/lalogo.png" class="img-fluid" alt=""></a>
+          <a href="https://www.annenberg.org/initiatives/global-humanitarian-arts-education/grow-annenberg/" target="_blank"><img src="./img/Grow.png" class="img-fluid" alt=""></a>
+          <p>The research project is funded by the generous support of the <a href="https://www.laphil.com/" target="_blank">Los Angeles Philharmonic Association</a> and the <a href="https://www.annenberg.org/initiatives/global-humanitarian-arts-education/grow-annenberg/"
+              target="_blank">GROW @ Annenberg</a>. </p> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End about -->
+
+  <!-- team -->
+  <section id="team">
+    <div class="container">
+      <div class="g-pt-90 g-pb-70">
+        <div class="g-heading-v10 g-mb-65 text-center">
+          <h2><em class="block-name"><span>02.</span> Our Team
+</em> Meet Our Team</h2>
+        </div>
+
+        <div class="row equal-height-columns team-members">
+          <div class="col-lg-4 col-sm-6  text-center mb-4 ">
+            <div class="team-box">
+              <div class="time-line">
+                <img class="rounded-circle img-fluid d-block mx-auto" src="./img/user1.png" alt="">
+                <h5>Name
+                              <br/>
+                              <small>computer science </small>
+                            </h5>
+              </div>
+
+              <p class="self-introduction">
+                some info
+              </p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 col-sm-6  text-center mb-4">
+            <div class="team-box">
+              <div class="time-line">
+                <img class="rounded-circle img-fluid d-block mx-auto" src="./img/user1.png" alt="">
+                <h5>Name
+                              <br/>
+                              <small>computer science </small>
+                            </h5>
+              </div>
+
+              <p class="self-introduction">
+                some info
+              </p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4  col-sm-6 text-center mb-4">
+            <div class="team-box">
+              <div class="time-line">
+                <img class="rounded-circle img-fluid d-block mx-auto" src="./img/user1.png" alt="">
+                <h5>Name
+                              <br/>
+                              <small>computer science </small>
+                            </h5>
+              </div>
+
+              <p class="self-introduction">
+                some info
+              </p>
+            </div>
+
+
+          </div>
+          <!-- <div class="row equal-height-columns">
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/bea.jpg" alt="">
+                  <h5>Dr. Beatriz Ilari
+                               <br/>
+                               <small>Co-Investigator </small>
+                             </h5>
+                </div>
+                <p class="self-introduction">
+
+                  Beatriz Ilari is Associate Professor of Music Education at the University of Southern California where she teaches graduate courses in music psychology, the sociology of music education, music in childhood, and research methods. She has conducted extensive
+                  research with babies, preschoolers, and school-aged children from the U.S., Brazil, Canada, Japan, and Mexico. In her work, she uses a variety of approaches to study different aspects of musical development and growth of infants, children,
+                  and adolescents. Her research is interdisciplinary in nature. Beatriz collaborates with scholars from diverse fields, including neuroscientists from USC’s Brain & Creativity Institute, and psychologists and educators from the Advancing
+                  Interdisciplinary Research in Singing (AIRS) team. She is currently the editor for Perspectives: Journal of the Early Childhood Music & Movement and Association(ECMMA), and also serves on the editorial boards of prestigious journals
+                  including Psychology of Music, Musicae Scientiae, and Music & Science.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6  text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image2-1.jpg" alt="">
+                  <h5>Priscilla Perez
+                                 <br/>
+                                 <small>Research Coordinator </small>
+                               </h5>
+
+                </div>
+                <p class="self-introduction">
+                  Priscilla has worked with the Brain and Music Project since 2015 as a parent interviewer, translator and research coordinator. She first developed her interest in research with understudied populations through her volunteer work as an undergraduate at
+                  the University of California, Los Angeles, where she studied Biology. She enjoys reading, hiking and spending time with her cat, Pancho.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image3-1.jpg" alt="">
+                  <h5>Sarah Hennessy
+                                  <br/>
+                                  <small>Research Coordinator </small>
+                                </h5>
+                </div>
+                <p class="self-introduction">
+
+                  Sarah graduated from Occidental College in 2017 with a BA in Psychology and a minor in Ethnomusicology. She has been with the Brain & Music project since 2015, and her time in the lab has cultivated her passion for the intersection of music and science.
+                  In her free time, Sarah teaches violin, sings with her friends, and reads books in the southern California sun.
+                </p>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div class="row equal-height-columns">
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image4-1.jpg" alt="">
+                  <h5>Katrina Heine
+                               <br/>
+                               <small>Neuroimaging Data Coordinator </small>
+                             </h5>
+
+                </div>
+                <p class="self-introduction">
+
+                  Katrina graduated from King’s College London in 2016 with a MSc in Neuroimaging. This is her second year with the Brain & Music Project, where she works mainly with scanning and analyzing the MRI data. When she isn’t at the lab, she enjoys playing volleyball
+                  and going to the beach.
+                </p>
+
+              </div>
+
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image5-1.jpg" alt="">
+                  <h5>Alison Wood
+                               <br/>
+                               <small>EEG Data Coordinator </small>
+                             </h5>
+                </div>
+                <p class="self-introduction">
+
+                  Alison graduated from Beloit College in 2016 with a Psychology major and Music minor. She works with the EEG data analysis and collection on the Brain & Music Project. In her free time, Alison enjoys reading and playing music.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image6-1.jpg" alt="">
+                  <h5>Gabriel Reigner
+                                <br/>
+                                <small>Research Assistant</small>
+                              </h5>
+
+                </div>
+                <p class="self-introduction">
+
+                  Gabriel is an undergraduate senior majoring in Neuroscience and Cognitive Science. A background in music performance and composition led him to the Brain & Music Program, where he has been a research assistant since 2016. With graduate school on the horizon,
+                  he hopes to explore more deeply the field of cognitive neuroscience. His other interests include surfing, backpacking, and photography.
+                </p>
+
+              </div>
+            </div>
+
+
+          </div>
+          <div class="row equal-height-columns">
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/Image7-1.jpg" alt="">
+                  <h5>Rohan Menon
+                               <br/>
+                               <small>Research Assistant</small>
+                             </h5>
+                </div>
+                <p class="self-introduction">
+
+                  Rohan is an undergraduate student in his 3rd year at the University of Southern California, where he is pursuing a degree in Neuroscience and Early Childhood Education. He is delighted to be a part of the Brain & Music Project, where he is working to
+                  understand the impact of musical training on brain development. Outside the lab, Rohan is a part of the USC Men’s Soccer Team and also loves to read, write, and play piano.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <div class="team-box">
+                <div class="time-line">
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="./img/samhita-1.jpg" alt="">
+                  <h5>Samhit Swamy
+                               <br/>
+                               <small>Research Assistant </small>
+                             </h5>
+                </div>
+                <p class="self-introduction">
+                  Sam is an undergraduate Neuroscience student at USC with a pre-medicine emphasis. Before joining the Brain & Music project, she worked in the Cahn Lab in the Brain & Creativity Institute, focusing on EEG studies of meditative states. Her aspirations lie
+                  in the field of psychiatry, and in investigating how to incorporate alternative therapies into clinical practice. Raised in the funky Southern town of Memphis, TN, she grew up around blues and soul music and is excited to incorporate
+                  a love for music into her research pursuits.
+                </p>
+
+              </div>
+            </div>
+
+
+
+          </div>
+          -->
+        </div>
+      </div>
+  </section>
+  <!-- End team -->
+
+  <!-- team -->
+  <section id="faq">
+    <div class="container">
+      <div class="g-pt-90 g-pb-70">
+        <div class="g-heading-v10 g-mb-65 text-center">
+          <h2><em class="block-name"><span>03.</span> About
+</em> About
+</h2>
+        </div>
+
+        <div class="tab-v1">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Info1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Info2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Info3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pills-contact-tab2" data-toggle="pill" href="#pills-contact2" role="tab" aria-controls="pills-contact2" aria-selected="false">Info4</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <!-- <div class="tab-in">
+                  <h4>1</h4>
+                  <div style="float:right; clear: both;" align="center">
+                    <img src="./img/Image8.jpg" hspace="20" class="img-fluid rounded" width="300" alt="">
+                  </div>
+                  <p class="text-justify">Participating in research is an invaluable gift you can offer to your community and to science. Our research investigates how children develop in response to music and the arts, and thus we hope to provide information to the public on
+                    the benefits of music and arts training. Our research could be ultimately used to inform education policy at a local, state, or national level. Without your help, this would not be possible!</p>
+
+                </div>
+                <div class="tab-in">
+                  <h4>2</h4>
+                  <p class="text-justify">When you and your child arrive to our facilities, you will be greeted at the door by one of our researchers. We will briefly explain the day’s activities and ask you to sign a few pieces of paper, stating that you understand and agree
+                    to the voluntary research participation. Then, your child will be lead to a room by a researcher to begin participation! Participation includes, MRI , EEG , and other games. You will be lead to a comfortable waiting room, where we
+                    have many magazines, games, and refreshment options. After your child’s participation is finished, he or she will be rewarded with a small gift, and you will receive monetary compensation for your time.</p>
+
+                </div> -->
+                <!-- <div class="tab-in">
+                  <h4>Can I bring my other children?</h4>
+                  <div style="float:right; clear: both;" align="center">
+                    <img src="./img/Image10.jpg" class="img-fluid rounded" hspace="20" vspace="0" width="300" alt="">
+                  </div>
+                  <p class="text-justify">Yes! We have a room set up just for you and your family. We have child-friendly games, toys, and coloring books. We have a variety of seating options for parents arriving without other children, as well.</p>
+
+                </div>
+                <div class="tab-in">
+                  <h4>How will I get to the lab?</h4>
+                  <p class="text-justify">Click here to learn about our transportation options, and to see directions to our facilities. </p>
+
+                </div>
+                <div class="tab-in">
+                  <h4>How often will I be asked to participate?</h4>
+                  <p class="text-justify">Your child will be asked to come in for two visits each year. </p>
+                </div>
+                <div class="tab-in">
+                  <h4>How can I schedule visits?</h4>
+                  <p class="text-justify">Call Priscilla at (323) 557- 3782. We are available Monday-Thursday 9am-6pm, and Saturday and Sunday 9am-6pm. If you need to reschedule a visit, please call or email us before your visit time!</p>
+                </div> -->
+                <!-- <div class="tab-in">
+                                   <h4>Have a concern/question/complaint?</h4>
+                                   <p class="text-justify">Feel free to share any concerns, questions, suggestions for improvement or complaints with us. You can call us directly or you can send us an anonymous message through this form. </p>
+                              </div> -->
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <!-- <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <h4>What is EEG?</h4>
+                  <div style="float:right; clear: both;" align="center">
+                    <img src="./img/Image11.jpg" class="img-fluid rounded" hspace="20" width="300" alt="">
+                  </div>
+                  <p class="text-justify">EEG stands for Electroencephalography, and is a non-invasive method that records electrical activity of the brain. A small cap is placed on your child’s head and, using small wires and receivers called electrodes, we can see your child’s
+                    brain activity to the millisecond. EEG recordings in this study are not intended to be diagnostic and do not replace a clinical EEG recording.</p>
+
+                </div>
+                <div class="tab-in">
+                  <h4>Are there risks associated with EEG?</h4>
+                  <p class="text-justify">There are no risks associated with EEG recording procedure. </p>
+                </div>
+                <div class="tab-in">
+                  <h4>What will my child do in the EEG room?</h4>
+                  <p class="text-justify">Your child will spend about 1.5 hours in the EEG room, including preparation time and breaks. Your child will watch a child-friendly cartoon and play a set of short computer games while we record his or her brain activity.</p>
+                </div>
+                <div class="tab-in">
+                  <h4>How do I know that my child will be comfortable during EEG?</h4>
+                  <p class="text-justify">Before we begin, we explain the EEG process to your child. No portion of the EEG should be uncomfortable. If, at any point, your child is uncomfortable, he or she can discontinue participation. We take many breaks during EEG, where your
+                    child will be able to stretch and eat snacks. </p>
+                </div>
+
+              </div> -->
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <!-- <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <h4>What is MRI?</h4>
+                  <div style="float:right; clear: both;" align="center">
+                    <img src="./img/Image24.jpg" class="img-fluid rounded" hspace="20" width="300" alt="">
+                  </div>
+                  <p class="text-justify">MRI stands for Magnetic Resonance Imaging. MRI is a non-invasive imaging method that uses a strong magnetic field and radio waves to make images of your brain. No X-rays or ionizing radiation are used in the MRI. Your child will NOT
+                    be given any MRI contrast agents [chemicals that help imaging certain brain tissues or processes] or any other drugs in this study. The MRI scans are not intended to be diagnostic and do not replace a clinical MRI scan.</p>
+                  <p class="text-justify">For a child-friendly video on how MRI works, please click here</p>
+                </div>
+                <div class="tab-in">
+                  <h4>Are there risks of MRI?</h4>
+                  <p class="text-justify">When you and your child arrive to our facilities, you will be greeted at the door by one of our researchers. We will briefly explain the day’s activities and ask you to sign a few pieces of paper, stating that you understand and agree
+                    to the voluntary research participation. Then, your child will be lead to a room by a researcher to begin participation! Participation includes, MRI , EEG , and other games. You will be lead to a comfortable waiting room, where we
+                    have many magazines, games, and refreshment options. After your child’s participation is finished, he or she will be rewarded with a small gift, and you will receive monetary compensation for your time.</p>
+                </div>
+                <div class="tab-in">
+                  <h4>What will my child do in the MRI?</h4>
+                  <p class="text-justify">You child will be asked to lie in our MRI machine for approximately 45 minutes but definitely not longer than 60 minutes. During each session, your child will be asked to keep his/her head still while MRI scans are completed.</p>
+                  <p class="text-justify">During the experiment, your child will hear repetitive tapping noises from the machine and he/she will wear earplugs to reduce the noise. During certain scanning sequences, your child may also feel the table vibrate as part of its normal
+                    method of operation. Your child can watch a video of his/her choice inside the scanner to help lying quietly in the machine while scanning. Your child can bring his/her video or choose one from our selection of children DVDs such as
+                    Toy Story, Frozen etc.</p>
+                </div>
+                <div class="tab-in">
+                  <h4>What if my child gets scared?</h4>
+                  <p class="text-justify">You may choose to stay inside the MRI room with your child and hold his/her hand. If you choose to stay in the room, you will be offered earplugs to reduce the noise of the MRI scanner which produces loud thumping and humming noises
+                    during imaging.</p>
+                  <p class="text-justify">Additionally, participation in all aspects of this study is voluntary. While we would love for every child to participate in the MRI scan, we are understanding of every child’s needs and wishes. If your child decides, at any point before
+                    or during the scan, that he or she does not want to participate anymore, we will remove them from the scanner immediately. A call button is provided such that your child may have the scan stopped at any time during the study.</p>
+                </div>
+                <div class="tab-in">
+                  <h4>How do I know that my child will be comfortable in the MRI?</h4>
+                  <p class="text-justify">Before we enter the MRI scanning room, we explain very thoroughly what the MRI experience will look, feel, and sound like. Your child will practice in a mock model of MRI machine, where we will make sure he or she feels completely comfortable
+                    and understands the process. During the scan, your child will be provided with blankets, pillows, and stuffed toys if desired. For the entire duration of the scan, your child will be able to talk to us and we will be able to talk to
+                    them. If your child wishes, we can stay in the scanner room with them. </p>
+                </div>
+                <div class="tab-in">
+                  <h4>What else should I know about MRI?</h4>
+                  <p class="text-justify">If your child has: a cardiac pacemaker; a metal clip in his/her body, a piece of metal in his/her eye she/he cannot have a MRI because the metal parts will be attracted by the magnet and will heat up. Any loose metallic object in your
+                    child’s body or in his/her pockets has to be removed because it will be attracted by the magnet and it will fly out of his/her pockets. This includes: key, jewelry, money clips, paper clips, safety pins, hairpins and barrettes. If
+                    you choose to stay inside the MRI scanning room during the session with your child, you will be asked to remove all metal and electronic objects prior to entering the MRI room. In addition, objects such as watches, credit cards and
+                    hearing aids could be damaged in the presence of magnetic field. A locker will be provided for you and your child to secure your items and valuables.</p>
+                </div>
+
+              </div> -->
+            </div>
+
+            <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact2-tab">
+              <!-- <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <h4>Appointment Scheduling</h4>
+                  <p class="text-justify">You may call Priscilla at (323) 557- 3782. </p>
+                  <p class="text-justify">We are available Monday-Thursday 9am-6pm, and Saturday and Sunday 9am-6pm. If you need to reschedule a visit, please call or email us before your visit time! </p>
+                  <p style="text-align:center;"> <img src="./img/Image12.jpg" class="img-fluid rounded" width="300" alt=""></p>
+
+                </div>
+
+              </div> -->
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+  <!-- End faq -->
+
+  <!-- team -->
+  <section id="kidscorner">
+    <div class="container">
+      <div class="g-pt-90 g-pb-70">
+        <div class="g-heading-v10 g-mb-65 text-center">
+          <h2><em class="block-name"><span>03.</span> Collections
+</em> <span class="kc-title">Collections</span>
+</h2>
+        </div>
+
+        <!-- <div class="tab-v1">
+          <map name="kidscornerimg" id="kidscornerimg">
+                        <ul class="nav nav-pills mb-3" id="pills-tab2" role="tablist">
+                          <li class="nav-item">
+                            <area shape="poly"  id="pills-welcome-tab" alt="welcome" title="welcome"   coords="0,0,0"  data-toggle="pill" href="#pills-welcome"  role="tab" aria-controls="pills-home" aria-selected="true"/>
+                          </li>
+                          <li class="nav-item">
+                            <area shape="poly"  id="pills-eeg-tab" alt="eeg experience" title="eeg experience"   coords="251,11,208,35,201,56,190,81,179,122,201,117,226,112,272,116,332,113,352,93,346,70,279,18,264,10"  data-toggle="pill" href="#pills-eeg" role="tab" aria-controls="pills-home" aria-selected="false"/>
+                          </li>
+                            <li class="nav-item">
+                              <area shape="poly" alt="mri experience" title="mri experience"  coords="221,9,123,19,55,48,37,74,16,139,19,171,42,199,78,204,135,142,170,113,192,57"  id="pills-mri-tab" data-toggle="pill" href="#pills-mri" role="tab" aria-controls="pills-profile" aria-selected="false"  />
+                            </li>
+                            <li class="nav-item">
+                              <area shape="poly" alt="mri video" title="mri video"  coords="199,125,251,119,295,126,323,132,318,163,297,194,260,206,221,214,186,216,171,229,134,223,113,200,127,156,158,138"  id="pills-mriv-tab" data-toggle="pill" href="#pills-mriv" role="tab" aria-controls="pills-contact" aria-selected="false" />
+                            </li>
+                        </ul>
+                      </map>
+          <div class="tab-content" id="pills-tabContent2">
+            <div class="tab-pane fade show active" id="pills-welcome" role="tabpanel" aria-labelledby="pills-welcome-tab">
+              <div class="tab-pane fade show active" id="welcome" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <h4 class="kc-welcome-title">Welcome to the Kids Corner! This is where you can find all sorts of information about what your day at USC will look, feel, and sound like!</h4>
+                  <p class="text-justify kc-welcome-p">First, let’s start with a big Thank you! In coming to USC, you are helping our researchers understand how the brain changes and develops as you grow up! You are also helping us understand how music and the arts influence you and other
+                    kids like you. You are now a junior scientist, helping the world to grow and expand with knowledge!</p>
+                  <p class="text-justify kc-welcome-explore">Click on the brain to explore our project!</p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-eeg" role="tabpanel" aria-labelledby="pills-eeg-tab">
+              <div class="tab-pane fade show active" id="eeg" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <p style="text-align:center;"><img src="./img/eeglink.jpg" class="img-fluid" alt=""></p>
+                  <p style="text-align:center;"><img src="./img/eeglink2.jpg" class="img-fluid" alt=""></p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-mri" role="tabpanel" aria-labelledby="pills-mri-tab">
+              <div class="tab-pane fade show active" id="mri" role="tabpanel" aria-labelledby="mri-tab">
+                <div class="tab-in">
+                  <p style="text-align:center;"><img src="./img/mri.jpg" class="img-fluid" alt=""></p>
+                  <p style="text-align:center;"><img src="./img/mri2.jpg" class="img-fluid" alt=""></p>
+                </div>
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-mriv" role="tabpanel" aria-labelledby="pills-mriv-tab">
+              <div class="tab-pane fade show active" id="mriv" role="tabpanel" aria-labelledby="mriv-tab">
+                <div class="tab-in">
+                  <div class="full-page">
+                    <br/>
+                    <h5 class="h5">English MRI Video</h5>
+                    <br/>
+                    <div class="embed-responsive embed-responsive-21by9">
+                      <p class="img-center"><iframe id="envideo" class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/4_O8tisCBXg?rel=0&amp;ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact2-tab">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-in">
+                  <h4>Appointment Scheduling</h4>
+                  <p class="text-justify">You may call Priscilla at (323) 557- 3782. </p>
+                  <p class="text-justify">We are available Monday-Thursday 9am-6pm, and Saturday and Sunday 9am-6pm. If you need to reschedule a visit, please call or email us before your visit time! </p>
+                  <p style="text-align:center;"> <img src="./img/Image12.jpg" class="img-fluid rounded" width="300" alt=""></p>
+
+                </div>
+
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div> -->
+
+
+
+      </div>
+    </div>
+  </section>
+  <!-- End faq -->
+
+
+
+  <section id="gettinghere" class="badge-warning text-dark">
+    <div class="container">
+      <div class="g-pt-90 g-pb-70">
+        <div class="g-heading-v10 g-mb-65 text-center">
+          <h2><em class="block-name"><span>04.</span> How to play
+               </em> How to play
+              </h2>
+        </div>
+
+        <div class="tab-pane " id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact2-tab">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <!-- <div class="tab-in">
+              <h4>Directions to the BCI</h4>
+              <p class="text-justify">From the parking structure A, head east on Downey Way. At your first opportunity, turn left onto a pedestrian walkway. Walk up the path until you see the Brain and Creativity Institute on your left. There will be a shiny metal post out in
+                front. When you get to the door, ring the doorbell and someone will buzz you into the building. In the lobby, you’ll check in with the receptionist and she’ll call Sarah. Should you get lost, please feel free to call Sarah or Priscilla
+                at <a href="tel:2137400928">213-740-0928<a/> (office) or <a href="tel:3235573782">323-557-3782</a> (cell).</p>
+              <p style="text-align:center;"> <img src="./img/Image13.png" class="img-fluid rounded" width="500" alt=""></p>
+
+            </div>
+
+            <div class="tab-in">
+              <h4>For families</h4>
+              <p class="text-justify">For families, we use <a href="https://lyft.com" target="_blank">Lyft</a>. For more information about Lyft, click here.. Lyfts can be ordered whenever you are ready to go- just let us know where and when! </p>
+
+            </div>
+
+            <div class="tab-in">
+              <h4>For kids traveling alone</h4>
+              <p class="text-justify">If you wish to send your child our lab without you, we have a ride service specially designated for that, called <a href="https://hopskipdrive.com" target="_blank">HopSkipDrive</a>. This is a service that uses drivers with childcare experience
+                and extensive background checks. For more information, click here. If you would like this option for your child, we must be notified a day in advance. </p>
+
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; 2018</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+
+
+  <script type="text/javascript">
+    // $('.selectpicker').selectpicker('val', 'English');
+    // var language = getCookie('language');
+    // if(language == "") {
+    //   setCookie('language', 'Spanish', 100);
+    //   // $('.selectpicker').selectpicker('val', 'Spanish');
+    //   document.getElementById("languageChange").value = 'Spanish';
+    // }else if(language == "Spanish"){
+    //   // $('.selectpicker').selectpicker('val', 'Spanish');
+    //   document.getElementById("languageChange").value = 'Spanish';
+    //   redirect("Spanish");
+    // }else {
+    //   document.getElementById("languageChange").value = 'English';
+    //
+    //   // $('.selectpicker').selectpicker('val', 'English');
+    //   redirect("English");
+    // }
+
+
+    function languageChange(val) {
+
+      setCookie('language', val, 100);
+      if (val == "English") {
+        redirect("English");
+      } else {
+        redirect("Spanish");
+      }
+
+
+    }
+
+    function redirect(val) {
+      if (val == "English") {
+        window.location.href = "index.html";
+      } else {
+        window.location.href = "spanish.html";
+      }
+    }
+
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+
+    $(function() {
+      // To style only selects with the selectpicker class
+
+      $("[data-toggle='popover']").popover({
+        html: true,
+        placement: 'auto',
+        container: 'body',
+        trigger: 'click'
+      });
+    });
+
+    function jump(name) {
+      if (name == "Hanna") {
+        window.open(
+          'https://dornsife.usc.edu/cf/faculty-and-staff/faculty.cfm?pid=1008329',
+          '_blank' // <- This is what makes it open in a new window.
+        );
+      } else {
+        window.open(
+          'https://dornsife.usc.edu/cf/faculty-and-staff/faculty.cfm?pid=1008328',
+          '_blank' // <- This is what makes it open in a new window.
+        );
+      }
+    }
+  </script>
+
+</body>
+
+</html>
